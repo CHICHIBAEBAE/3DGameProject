@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 615873825632132450}
   - component: {fileID: 3763254285309265381}
   - component: {fileID: 1411936384508695349}
-  - component: {fileID: 5677448176237760856}
+  - component: {fileID: 1793969140187382169}
   m_Layer: 5
   m_Name: ItemSlot
   m_TagString: Untagged
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5677448176237760856}
+      - m_Target: {fileID: 1793969140187382169}
         m_TargetAssemblyTypeName: ItemSlot, Assembly-CSharp
         m_MethodName: OnClickButton
         m_Mode: 1
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 0
---- !u!114 &5677448176237760856
+--- !u!114 &1793969140187382169
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1987596725127029194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b138fb6611c3ec143a27b7876591cbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 890a11eef05bf1e44823e9670bd96be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
@@ -238,8 +238,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 474b7f4a7c5ae8445a60532c87275862, type: 2}
-  m_sharedMaterial: {fileID: 4376605044803535882, guid: 474b7f4a7c5ae8445a60532c87275862, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

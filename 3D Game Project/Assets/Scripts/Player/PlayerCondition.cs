@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public interface IDamagable
@@ -11,12 +10,14 @@ public interface IDamagable
 public class PlayerCondition : MonoBehaviour, IDamagable
 {
     public UICondition uiCondition;
+    public PlayerController controller;
 
     Condition health { get { return uiCondition.health; } }
     Condition hunger { get { return uiCondition.hunger; } }
     Condition stamina { get { return uiCondition.stamina; } }
 
     public float noHungerHealthDecay;
+    public float boostTime;
 
     public event Action onTakeDamage;
 
@@ -56,4 +57,17 @@ public class PlayerCondition : MonoBehaviour, IDamagable
         health.Subtract(damage);
         onTakeDamage?.Invoke();
     }
+
+    public void Boost(float value)
+    {
+        controller.moveSpeed = value;
+        StartCoroutine(BoostTime(value, boostTime));
+    }
+
+    IEnumerator BoostTime(float value, float time)
+    {
+        controller.moveSpeed -= value;
+        yield return new WaitForSeconds(time);
+    }
+        
 }
