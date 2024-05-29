@@ -114,6 +114,7 @@ public class PlayerController : MonoBehaviour
             new Ray(transform.position + (-transform.right * 0.2f) +(transform.up * 0.01f), Vector3.down)     // 오브젝트의 왼쪽 + 약간 위에서 아래로
         };
 
+        // 4개의 레이를 반복해서 검사
         for (int i = 0; i < rays.Length; i++)
         {
             // 각 Ray가 길이 0.1f 이내에서 바닥에 닿았는지 검사, groudLayerMask는 오브젝트가 지면으로 인식할 레이어 지정, 지면에 닿으면 true반환
@@ -122,7 +123,7 @@ public class PlayerController : MonoBehaviour
                 return true;
             }
         }
-
+        // 지면에 닿지 않았다면 false 반환
         return false;
     }
 }
