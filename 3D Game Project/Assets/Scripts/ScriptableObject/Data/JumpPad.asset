@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b1773d9e986f24c947fd411d70fdaa, type: 3}
   m_Name: JumpPad
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
-  type: 0
+  displayName: "\uC810\uD504 \uD328\uB4DC"
+  description: "\uB0A0\uC544\uC62C\uB77C"
+  type: 3
   icon: {fileID: 0}
-  dropPrefab: {fileID: 0}
+  dropPrefab: {fileID: 3539928568522602865, guid: 033e4bd851be44e43a0fe8b37f871d3a, type: 3}
   canStack: 0
   maxStackAmount: 0
   consumables: []
