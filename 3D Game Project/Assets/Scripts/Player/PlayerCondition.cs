@@ -21,6 +21,12 @@ public class PlayerCondition : MonoBehaviour, IDamagable
 
     public event Action onTakeDamage;
 
+    void Start()
+    {
+        controller = GetComponent<PlayerController>();
+    }
+
+
     void Update()
     {
         hunger.Subtract(hunger.passiveValue * Time.deltaTime);
@@ -60,14 +66,14 @@ public class PlayerCondition : MonoBehaviour, IDamagable
 
     public void Boost(float value)
     {
-        controller.moveSpeed = value;
+        controller.moveSpeed += value; // 5 + 5 
         StartCoroutine(BoostTime(value, boostTime));
     }
 
     IEnumerator BoostTime(float value, float time)
     {
-        controller.moveSpeed -= value;
         yield return new WaitForSeconds(time);
+        controller.moveSpeed -= value;
     }
         
 }
