@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jumpPower;
     private Vector2 curMovementInput;
     public LayerMask groundLayerMask;
+    private Vector3 beforeDir;
 
     [Header("Look")]
     public Transform cameraContainer;
@@ -74,7 +75,20 @@ public class PlayerController : MonoBehaviour
 
         // rigidbody의 속도를 dir로 설정한다.
         // = 물리적으로 오브젝트를 움직이게 된다.
-        rb.velocity = dir;
+        // 현재 이동 방향이 이전과 동일한지 확인하고, 이를 기반으로 플레이어의 속도를 업데이트
+        if (dir != Vector3.zero)
+        {
+            rb.velocity = dir;
+            beforeDir = dir;
+        }
+        else
+        {
+            if(dir != beforeDir)
+            {
+                rb.velocity = dir;
+                beforeDir = dir;
+            }
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
